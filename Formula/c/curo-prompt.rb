@@ -5,8 +5,8 @@
 class CuroPrompt < Formula
   desc "CLI tool for analyzing, evaluating, and optimizing LLM prompts"
   homepage "https://github.com/curogom/curo-prompt"
-  url "https://github.com/curogom/curo-prompt/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "ac773d2af00ded20ba4b1bad2b9637e203e02180fcd2fa797d0743cfc8c9c80d"
+  url "https://github.com/curogom/curo-prompt/archive/refs/tags/v0.1.1.tar.gz"
+  sha256 "db83ed869a533375c41ceaaf04d53f9d73efc64214b3aae1ce3ff9da43e85b9b"
   license "Apache-2.0"
   version "0.1.0"
   head "https://github.com/curogom/curo-prompt.git", branch: "main"
