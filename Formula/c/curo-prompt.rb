@@ -36,4 +36,3 @@ class CuroPrompt < Formula
     system "#{bin}/curo-prompt", "--version"
   end
 end
-
