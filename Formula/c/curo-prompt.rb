@@ -18,16 +18,16 @@ class CuroPrompt < Formula
     version_str = version.to_s
     build_time = Time.now.utc.strftime("%Y-%m-%d_%H:%M:%S")
     
-    # Use explicit string interpolation to ensure proper formatting
-    ldflags = [
+    # Build ldflags as a single string for -ldflags flag
+    ldflags_str = [
       "-s",
       "-w",
-      "-X", "main.Version=#{version_str}",
-      "-X", "main.BuildTime=#{build_time}",
-      "-X", "main.GitCommit=#{version_str}"
-    ]
+      "-X main.Version=#{version_str}",
+      "-X main.BuildTime=#{build_time}",
+      "-X main.GitCommit=#{version_str}"
+    ].join(" ")
     
-    system "go", "build", *ldflags,
+    system "go", "build", "-ldflags", ldflags_str,
            "-o", bin/"curo-prompt", "./cmd/curo-prompt"
   end
 
